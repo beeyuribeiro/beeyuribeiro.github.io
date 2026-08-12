@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada - Beeyu Ribeiro Sousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EDEAE1;
+    --paper-2: #E3DFD3;
+    --ink: #1B1B18;
+    --ink-soft: #55534B;
+    --green: #2B4735;
+    --mustard: #C68A2E;
+    --cyan: #00AEEF;
+    --magenta: #EC008C;
+    --yellow: #FFE000;
+    --line: rgba(27,27,24,0.18);
+    --line-strong: rgba(27,27,24,0.35);
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .colorbar{ display:flex; width:100%; height:7px; }
+  .colorbar span{ flex:1; }
+  .colorbar .c{ background:var(--cyan); }
+  .colorbar .m{ background:var(--magenta); }
+  .colorbar .y{ background:var(--yellow); }
+  .colorbar .k{ background:#000; }
+
+  main{
+    flex:1;
+    max-width:640px;
+    margin:0 auto;
+    padding:60px 32px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .crop{ position:absolute; width:18px; height:18px; }
+  .crop::before, .crop::after{ content:''; position:absolute; background:var(--line-strong); }
+  .crop::before{ width:100%; height:1px; top:50%; left:0; }
+  .crop::after{ width:1px; height:100%; left:50%; top:0; }
+  .crop.tl{ top:10px; left:10px; }
+  .crop.tr{ top:10px; right:10px; }
+  .crop.bl{ bottom:10px; left:10px; }
+  .crop.br{ bottom:10px; right:10px; }
+
+  .spec-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .code404{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(90px, 22vw, 160px);
+    line-height:0.9;
+    letter-spacing:-0.03em;
+    color:var(--ink);
+    margin:0;
+    position:relative;
+  }
+  .code404 span{ color:var(--mustard); }
+  .headline{
+    font-family:'JetBrains Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    font-size:13px;
+    color:var(--green);
+    margin:18px 0 14px;
+  }
+  p.lede{
+    font-size:15.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    max-width:44ch;
+    margin:0 0 30px;
+  }
+  .back{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    color:var(--ink);
+    border:1px solid var(--line-strong);
+    background:var(--paper-2);
+    padding:12px 20px;
+    border-radius:2px;
+    transition:background .18s ease, color .18s ease, transform .18s ease;
+  }
+  .back:hover{ background:var(--green); color:var(--paper); transform:translateY(-2px); }
+
+  footer{
+    text-align:center;
+    padding:18px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<div class="colorbar"><span class="c"></span><span class="m"></span><span class="y"></span><span class="k"></span></div>
+
+<main>
+  <div class="crop tl"></div>
+  <div class="crop tr"></div>
+  <div class="crop bl"></div>
+  <div class="crop br"></div>
+
+  <p class="spec-tag">Ficha técnica &middot; item não catalogado</p>
+  <h1 class="code404">4<span>0</span>4</h1>
+  <p class="headline">Essa página saiu da grade</p>
+  <p class="lede">O elemento que você procura não está registrado nesta ficha. Deve ter sido cortado na diagramação, ou o endereço foi digitado errado.</p>
+  <a class="back" href="/">&larr; voltar para o currículo</a>
+</main>
+
+<footer>BEEYU RIBEIRO SOUSA &middot; DESIGN GRÁFICO &amp; DESENVOLVIMENTO WEB</footer>
+
+</body>
+</html>
