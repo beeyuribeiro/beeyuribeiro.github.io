@@ -81,6 +81,27 @@
   }
   @media (max-width:900px){ .ruler{ display:none; } }
 
+  /* ---------- language toggle ---------- */
+  .lang-toggle{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:20;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.05em;
+    padding:8px 14px;
+    border:1px solid var(--line-strong);
+    border-radius:2px;
+    background:var(--paper-2);
+    color:var(--ink);
+    cursor:crosshair;
+    transition:background .18s ease, color .18s ease, transform .18s ease;
+  }
+  .lang-toggle:hover{ background:var(--green); color:var(--paper); transform:translateY(-2px); }
+  @media (max-width:640px){ .lang-toggle{ top:12px; right:12px; padding:6px 11px; font-size:10.5px; } }
+
   /* crosshair cursor on interactive design elements */
   .chip.link, .swatch, .approve{ cursor:crosshair; }
 
@@ -373,6 +394,8 @@
 
 <div class="ruler" id="ruler" aria-hidden="true"></div>
 
+<button class="lang-toggle" id="lang-toggle" type="button">EN</button>
+
 <div class="sheet">
   <div class="crop tl"></div>
   <div class="crop tr"></div>
@@ -382,39 +405,39 @@
 
   <header>
     <div class="doc-meta spec-tag">
-      <span>FICHA TÉCNICA <span>Nº 003</span></span>
+      <span data-i18n="meta-title">FICHA TÉCNICA <span>Nº 003</span></span>
       <span>REV. 2026</span>
     </div>
     <h1>Beeyu Ribeiro<br>Sousa</h1>
     <svg class="squiggle" width="230" height="20" viewBox="0 0 230 20" fill="none">
       <path d="M2 14C20 4 34 4 50 12C66 20 80 20 96 10C112 0 126 2 142 12C158 22 172 16 188 8C200 2 212 4 228 10" stroke="var(--mustard)" stroke-width="2.4" stroke-linecap="round"/>
     </svg>
-    <p class="role-line"><b>Designer Gráfico</b> / Identidade Visual &amp; Social Media / Desenvolvimento Web</p>
+    <p class="role-line" data-i18n="role-line"><b>Designer Gráfico</b> / Identidade Visual &amp; Social Media / Desenvolvimento Web</p>
     <div class="contact-row">
       <a class="chip link" href="https://www.behance.net/beeyu" target="_blank" rel="noopener">behance.net/<b>beeyu</b></a>
       <a class="chip link" href="https://wa.me/5538997301752" target="_blank" rel="noopener">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.16c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.32-1.66-.62-2.93-1.27-4.84-4.24-4.99-4.44-.15-.2-1.2-1.59-1.2-3.03 0-1.44.75-2.15 1.02-2.44.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
         WhatsApp
       </a>
-      <span class="chip">28 anos</span>
+      <span class="chip" data-i18n="age-chip">28 anos</span>
     </div>
   </header>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Resumo</span><span class="sec-rule"></span></div>
-    <p class="lede">Sou designer gráfica com experiência em identidade visual, branding e social media, atuando também na edição de vídeo, no suporte técnico de TI e no desenvolvimento web. Construo soluções visuais e digitais sob medida para cada cliente, unindo estética, estratégia e tecnologia.</p>
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title" data-i18n="sec1-title">Resumo</span><span class="sec-rule"></span></div>
+    <p class="lede" data-i18n="lede">Sou designer gráfica com experiência em identidade visual, branding e social media, atuando também na edição de vídeo, no suporte técnico de TI e no desenvolvimento web. Construo soluções visuais e digitais sob medida para cada cliente, unindo estética, estratégia e tecnologia.</p>
   </section>
 
   <section id="s2">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Experiência</span><span class="sec-rule"></span></div>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title" data-i18n="sec2-title">Experiência</span><span class="sec-rule"></span></div>
 
     <div class="job">
-      <div class="job-date"><span class="tick"></span>09/2023 - Atual</div>
+      <div class="job-date"><span class="tick"></span><span data-i18n="job1-date">09/2023 - Atual</span></div>
       <div>
         <p class="job-title">BEM MAIS - Cartão de Benefícios</p>
         <ul>
-          <li>Responsável pela identidade visual e pelo conteúdo de redes sociais da empresa, em contato direto com o time comercial.</li>
-          <li>Atuo também como técnica de informática, realizando manutenção de computadores, além do atendimento ao cliente e apoio administrativo.</li>
+          <li data-i18n="job1-li1">Responsável pela identidade visual e pelo conteúdo de redes sociais da empresa, em contato direto com o time comercial.</li>
+          <li data-i18n="job1-li2">Atuo também como técnica de informática, realizando manutenção de computadores, além do atendimento ao cliente e apoio administrativo.</li>
         </ul>
       </div>
     </div>
@@ -424,8 +447,8 @@
       <div>
         <p class="job-title">Alves Supermercados</p>
         <ul>
-          <li>Responsável pelo design gráfico e pelas redes sociais da loja.</li>
-          <li>Planejei e executei as campanhas de tráfego pago, do início aos resultados.</li>
+          <li data-i18n="job2-li1">Responsável pelo design gráfico e pelas redes sociais da loja.</li>
+          <li data-i18n="job2-li2">Planejei e executei as campanhas de tráfego pago, do início aos resultados.</li>
         </ul>
       </div>
     </div>
@@ -435,8 +458,8 @@
       <div>
         <p class="job-title">Estúdio CineFoto</p>
         <ul>
-          <li>Direção de fotos e vídeos ao lado dos fotógrafos, traduzindo as ideias dos clientes em resultado visual.</li>
-          <li>Editei o conteúdo e fui responsável pela informática do estúdio: rede, impressoras e manutenção dos computadores.</li>
+          <li data-i18n="job3-li1">Direção de fotos e vídeos ao lado dos fotógrafos, traduzindo as ideias dos clientes em resultado visual.</li>
+          <li data-i18n="job3-li2">Editei o conteúdo e fui responsável pela informática do estúdio: rede, impressoras e manutenção dos computadores.</li>
         </ul>
       </div>
     </div>
@@ -446,35 +469,36 @@
       <div>
         <p class="job-title">Winners Language School</p>
         <ul>
-          <li>Professora de idiomas e informática para turmas de perfis variados.</li>
-          <li>Também responsável pelas redes sociais da escola e pela manutenção técnica dos equipamentos.</li>
+          <li data-i18n="job4-li1">Professora de idiomas e informática para turmas de perfis variados.</li>
+          <li data-i18n="job4-li2">Também responsável pelas redes sociais da escola e pela manutenção técnica dos equipamentos.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="s3">
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Educação</span><span class="sec-rule"></span></div>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title" data-i18n="sec3-title">Educação</span><span class="sec-rule"></span></div>
     <div class="edu-grid">
       <div>
-        <div class="edu-col-label">Formação Superior</div>
+        <div class="edu-col-label" data-i18n="edu-col1">Formação Superior</div>
         <div class="edu-item">
-          <div class="name">Design Gráfico - Unopar Anhanguera</div>
-          <div class="when">2026 - Em andamento</div>
+          <div class="name" data-i18n="edu1-name">Design Gráfico - Unopar Anhanguera</div>
+          <div class="when" data-i18n="edu1-when">2026 - Em andamento</div>
         </div>
         <div class="edu-item">
-          <div class="name">Design - Universidade Federal do Espírito Santo</div>
+          <div class="name" data-i18n="edu2-name">Design - Universidade Federal do Espírito Santo</div>
           <div class="when">01/2018 - 12/2020</div>
         </div>
         <div class="edu-item">
-          <div class="name">Ciências da Computação - IFNMG</div>
+          <div class="name" data-i18n="edu3-name">Ciências da Computação - IFNMG</div>
           <div class="when">01/2015 - 08/2016</div>
         </div>
       </div>
       <div>
-        <div class="edu-col-label alt">Cursos Livres</div>
+        <div class="edu-col-label alt" data-i18n="edu-col2">Cursos Livres</div>
         <div class="edu-item">
-          <div class="name">Técnico em Informática - Compuway</div>
+          <div class="name" data-i18n="edu-compuway">Técnico em Informática - Compuway</div>
+          <div class="when">2019</div>
         </div>
         <div class="edu-item">
           <div class="name">Designer de Outra Dimensão - Q28A</div>
@@ -489,42 +513,42 @@
   </section>
 
   <section id="s4">
-    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Habilidades</span><span class="sec-rule"></span></div>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title" data-i18n="sec4-title">Habilidades</span><span class="sec-rule"></span></div>
     <div class="swatch-grid">
       <div class="swatch">
-        <div class="code"><span>PANT. 01</span><span>AVANÇADO</span></div>
-        <div class="cat">Design Gráfico</div>
+        <div class="code"><span>PANT. 01</span><span data-i18n="lv-adv">AVANÇADO</span></div>
+        <div class="cat" data-i18n="cat1">Design Gráfico</div>
         <div class="items">Photoshop, Illustrator, InDesign, Lightroom, Figma</div>
         <div class="bar"></div>
       </div>
       <div class="swatch">
-        <div class="code"><span>PANT. 02</span><span>AVANÇADO / INTERM.</span></div>
-        <div class="cat">Vídeo</div>
-        <div class="items">CapCut (avançado), Premiere (intermediário)</div>
+        <div class="code"><span>PANT. 02</span><span data-i18n="lv-adv-interm">AVANÇADO / INTERM.</span></div>
+        <div class="cat" data-i18n="cat2">Vídeo</div>
+        <div class="items" data-i18n="items2">CapCut (avançado), Premiere (intermediário)</div>
         <div class="bar"></div>
       </div>
       <div class="swatch">
-        <div class="code"><span>PANT. 03</span><span>BÁSICO / INTERM.</span></div>
-        <div class="cat">Desenvolvimento</div>
-        <div class="items">HTML, CSS, JavaScript, Python, PHP - sites, aplicativos e sistemas web</div>
+        <div class="code"><span>PANT. 03</span><span data-i18n="lv-basic-interm">BÁSICO / INTERM.</span></div>
+        <div class="cat" data-i18n="cat3">Desenvolvimento</div>
+        <div class="items" data-i18n="items3">HTML, CSS, JavaScript, Python, PHP - sites, aplicativos e sistemas web</div>
         <div class="bar"></div>
       </div>
       <div class="swatch">
-        <div class="code"><span>PANT. 04</span><span>AVANÇADO</span></div>
-        <div class="cat">Suporte Técnico / TI</div>
-        <div class="items">Manutenção de computadores e gerenciamento de redes</div>
+        <div class="code"><span>PANT. 04</span><span data-i18n="lv-adv2">AVANÇADO</span></div>
+        <div class="cat" data-i18n="cat4">Suporte Técnico / TI</div>
+        <div class="items" data-i18n="items4">Manutenção de computadores e gerenciamento de redes</div>
         <div class="bar"></div>
       </div>
       <div class="swatch">
-        <div class="code"><span>PANT. 05</span><span>AVANÇADO</span></div>
-        <div class="cat">Pacote Office</div>
+        <div class="code"><span>PANT. 05</span><span data-i18n="lv-adv3">AVANÇADO</span></div>
+        <div class="cat" data-i18n="cat5">Pacote Office</div>
         <div class="items">Word, PowerPoint, Excel</div>
         <div class="bar"></div>
       </div>
       <div class="swatch">
         <div class="code"><span>PANT. 06</span><span>CEFR C2</span></div>
-        <div class="cat">Idiomas</div>
-        <div class="items">Inglês fluente</div>
+        <div class="cat" data-i18n="cat6">Idiomas</div>
+        <div class="items" data-i18n="items6">Inglês fluente</div>
         <div class="bar"></div>
       </div>
     </div>
@@ -533,12 +557,12 @@
   <footer>
     <div class="stamp-row">
       <div class="stamp">
-        DOCUMENTO GERADO PARA FINS DE CANDIDATURA<br>
-        FORMATO / WEB - RESPONSIVO<br>
-        WHATSAPP / <a href="https://wa.me/5538997301752" target="_blank" rel="noopener" style="color:inherit;">(38) 9 9730-1752</a><br>
-        IMPRESSO EM <span id="print-date"></span>
+        <span data-i18n="foot1">DOCUMENTO GERADO PARA FINS DE CANDIDATURA</span><br>
+        <span data-i18n="foot2">FORMATO / WEB - RESPONSIVO</span><br>
+        <span data-i18n="foot3">WHATSAPP</span> / <a href="https://wa.me/5538997301752" target="_blank" rel="noopener" style="color:inherit;">(38) 9 9730-1752</a><br>
+        <span data-i18n="foot4">IMPRESSO EM</span> <span id="print-date"></span>
       </div>
-      <div class="approve">Feito &amp; assinado por Beeyu</div>
+      <div class="approve" data-i18n="approve">Feito &amp; assinado por Beeyu</div>
     </div>
   </footer>
 </div>
@@ -591,6 +615,72 @@
   console.log('%c Você abriu o F12. Já temos algo em comum: curiosidade por como as coisas são feitas por trás. ', 'font-family:monospace; font-size:12px; color:#1B1B18; background:#EDEAE1; padding:4px 10px; border-radius:2px;');
   console.log('%c Se topar bater um papo sobre design (ou sobre esse código), me chama: ', 'font-family:monospace; font-size:12px; color:#1B1B18; background:#EDEAE1; padding:4px 10px; border-radius:2px;');
   console.log('%c behance.net/beeyu   |   wa.me/5538997301752 ', 'font-family:monospace; font-size:12px; font-weight:bold; color:#1B1B18; background:#C68A2E; padding:4px 10px; border-radius:2px;');
+
+  /* ---------- EN / PT toggle ---------- */
+  const translations = {
+    'meta-title': { pt: 'FICHA TÉCNICA <span>Nº 003</span>', en: 'SPEC SHEET <span>No. 003</span>' },
+    'role-line': { pt: '<b>Designer Gráfico</b> / Identidade Visual &amp; Social Media / Desenvolvimento Web', en: '<b>Graphic Designer</b> / Visual Identity &amp; Social Media / Web Development' },
+    'age-chip': { pt: '28 anos', en: '28 years old' },
+    'sec1-title': { pt: 'Resumo', en: 'Summary' },
+    'lede': { pt: 'Sou designer gráfica com experiência em identidade visual, branding e social media, atuando também na edição de vídeo, no suporte técnico de TI e no desenvolvimento web. Construo soluções visuais e digitais sob medida para cada cliente, unindo estética, estratégia e tecnologia.', en: 'I am a graphic designer with experience in visual identity, branding and social media, also working with video editing, IT technical support and web development. I build visual and digital solutions tailored to each client, combining aesthetics, strategy and technology.' },
+    'sec2-title': { pt: 'Experiência', en: 'Experience' },
+    'job1-date': { pt: '09/2023 - Atual', en: '09/2023 - Present' },
+    'job1-li1': { pt: 'Responsável pela identidade visual e pelo conteúdo de redes sociais da empresa, em contato direto com o time comercial.', en: 'In charge of the company\u2019s visual identity and social media content, working closely with the sales team.' },
+    'job1-li2': { pt: 'Atuo também como técnica de informática, realizando manutenção de computadores, além do atendimento ao cliente e apoio administrativo.', en: 'Also work as the IT technician, handling computer maintenance, alongside customer service and administrative support.' },
+    'job2-li1': { pt: 'Responsável pelo design gráfico e pelas redes sociais da loja.', en: 'In charge of the store\u2019s graphic design and social media.' },
+    'job2-li2': { pt: 'Planejei e executei as campanhas de tráfego pago, do início aos resultados.', en: 'Planned and ran paid traffic campaigns, from setup to results.' },
+    'job3-li1': { pt: 'Direção de fotos e vídeos ao lado dos fotógrafos, traduzindo as ideias dos clientes em resultado visual.', en: 'Directed photos and videos alongside the photographers, turning client ideas into visual results.' },
+    'job3-li2': { pt: 'Editei o conteúdo e fui responsável pela informática do estúdio: rede, impressoras e manutenção dos computadores.', en: 'Edited content and handled the studio\u2019s IT: network, printers and computer maintenance.' },
+    'job4-li1': { pt: 'Professora de idiomas e informática para turmas de perfis variados.', en: 'Taught languages and computer skills to classes of varied profiles.' },
+    'job4-li2': { pt: 'Também responsável pelas redes sociais da escola e pela manutenção técnica dos equipamentos.', en: 'Also in charge of the school\u2019s social media and technical maintenance of equipment.' },
+    'sec3-title': { pt: 'Educação', en: 'Education' },
+    'edu-col1': { pt: 'Formação Superior', en: 'Higher Education' },
+    'edu-col2': { pt: 'Cursos Livres', en: 'Additional Courses' },
+    'edu1-name': { pt: 'Design Gráfico - Unopar Anhanguera', en: 'Graphic Design - Unopar Anhanguera' },
+    'edu1-when': { pt: '2026 - Em andamento', en: '2026 - Ongoing' },
+    'edu2-name': { pt: 'Design - Universidade Federal do Espírito Santo', en: 'Design - Federal University of Espírito Santo' },
+    'edu3-name': { pt: 'Ciências da Computação - IFNMG', en: 'Computer Science - IFNMG' },
+    'edu-compuway': { pt: 'Técnico em Informática - Compuway', en: 'IT Technician - Compuway' },
+    'sec4-title': { pt: 'Habilidades', en: 'Skills' },
+    'lv-adv': { pt: 'AVANÇADO', en: 'ADVANCED' },
+    'lv-adv2': { pt: 'AVANÇADO', en: 'ADVANCED' },
+    'lv-adv3': { pt: 'AVANÇADO', en: 'ADVANCED' },
+    'lv-adv-interm': { pt: 'AVANÇADO / INTERM.', en: 'ADVANCED / INTERM.' },
+    'lv-basic-interm': { pt: 'BÁSICO / INTERM.', en: 'BASIC / INTERM.' },
+    'cat1': { pt: 'Design Gráfico', en: 'Graphic Design' },
+    'cat2': { pt: 'Vídeo', en: 'Video' },
+    'cat3': { pt: 'Desenvolvimento', en: 'Development' },
+    'cat4': { pt: 'Suporte Técnico / TI', en: 'Technical Support / IT' },
+    'cat5': { pt: 'Pacote Office', en: 'Office Suite' },
+    'cat6': { pt: 'Idiomas', en: 'Languages' },
+    'items2': { pt: 'CapCut (avançado), Premiere (intermediário)', en: 'CapCut (advanced), Premiere (intermediate)' },
+    'items3': { pt: 'HTML, CSS, JavaScript, Python, PHP - sites, aplicativos e sistemas web', en: 'HTML, CSS, JavaScript, Python, PHP - websites, apps and web systems' },
+    'items4': { pt: 'Manutenção de computadores e gerenciamento de redes', en: 'Computer maintenance and network management' },
+    'items6': { pt: 'Inglês fluente', en: 'Fluent English' },
+    'foot1': { pt: 'DOCUMENTO GERADO PARA FINS DE CANDIDATURA', en: 'DOCUMENT GENERATED FOR JOB APPLICATION PURPOSES' },
+    'foot2': { pt: 'FORMATO / WEB - RESPONSIVO', en: 'FORMAT / WEB - RESPONSIVE' },
+    'foot3': { pt: 'WHATSAPP', en: 'WHATSAPP' },
+    'foot4': { pt: 'IMPRESSO EM', en: 'PRINTED ON' },
+    'approve': { pt: 'Feito &amp; assinado por Beeyu', en: 'Made &amp; signed by Beeyu' },
+  };
+
+  const langBtn = document.getElementById('lang-toggle');
+  const i18nEls = document.querySelectorAll('[data-i18n]');
+  let currentLang = 'pt';
+
+  function applyLang(lang){
+    i18nEls.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const entry = translations[key];
+      if(entry) el.innerHTML = entry[lang];
+    });
+    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+    document.title = lang === 'en' ? 'Beeyu Ribeiro Sousa - Resume' : 'Beeyu Ribeiro Sousa - Currículo';
+    langBtn.textContent = lang === 'en' ? 'PT' : 'EN';
+    currentLang = lang;
+  }
+
+  langBtn.addEventListener('click', () => applyLang(currentLang === 'pt' ? 'en' : 'pt'));
 </script>
 
 </body>
